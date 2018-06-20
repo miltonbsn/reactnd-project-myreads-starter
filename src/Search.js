@@ -29,7 +29,7 @@ class Search extends Component {
       render() {
 
         const { query, newBooks, searchErr } = this.state;
-        const { books } = this.props;
+        const { books, changeShelf } = this.props;
     
           return (
             <div className="search-books">
@@ -54,6 +54,7 @@ class Search extends Component {
                           book={ book }
                           books={ books }
                           key={ book.id }
+                          changeShelf={ changeShelf }
                         />
                       ))}
                     </ol>

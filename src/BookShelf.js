@@ -1,11 +1,10 @@
 
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
 import Book from './Book'
 
 class BookShelf extends Component {
   render() {
-    const { books } = this.props
+    const { books, changeShelf } = this.props
     return (
       <ol className="books-grid">
         {books.map((book) => (
@@ -13,6 +12,7 @@ class BookShelf extends Component {
             book={ book }
             books={ books }
             key={ book.id }
+            changeShelf={ changeShelf }
           />
         ))}
       </ol>
